@@ -14,4 +14,4 @@
 
 效果图：
 
-<img src=" https://github.com/M0nster3/CheckUrl/blob/main/Image/sc_20221207203634.png?raw=true" width="633" >
+<img src=" https://github.com/M0nster3/CheckUrl/raw/main/Image/sc_20221207203634.png?raw=true" width="633" >
