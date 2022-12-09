@@ -152,7 +152,7 @@ func main() {
 				code := fmt.Sprintf("%v", a[1])
 				if strings.Contains(code, "200") {
 					if len(a) == 3{
-						fmt.Println(color.LightGreen.Sprintf("[URL:%s code:%d Bytes:%d]\n", a[0], a[1], a[2]))
+						fmt.Println(color.LightCyan.Sprintf("%-80s", a[0]) + color.LightGreen.Sprintf(" [ code: %d, Bytes: %d ]\n", a[1], a[2]))
 						if out !=""{
 							code1 := fmt.Sprintf("%v", a[0])
 							code2 := fmt.Sprintf("%v", a[1])
@@ -160,7 +160,7 @@ func main() {
 							outfile(out,"[URL:"+code1+"code:"+code2+"Bytes:"+code3+"]\n")
 						}
 					}else if len(a) == 4{
-						fmt.Println(color.LightGreen.Sprintf("[URL:%s code:%d Bytes:%d Title:%s]\n",a[0],a[1],a[2],a[3]))
+						fmt.Println(color.LightCyan.Sprintf("%-80s", a[0]) + color.LightGreen.Sprintf(" [ code: %d, Bytes: %d, title: %s ]\n", a[1], a[2], a[3]))
 						if out !=""{
 							code1 := fmt.Sprintf("%v", a[0])
 							code2 := fmt.Sprintf("%v", a[1])
@@ -179,7 +179,7 @@ func main() {
 
 				if !strings.Contains(code, "200") && len(a) != 1 {
 					if len(a) == 3 {
-						fmt.Println(color.LightRed.Sprintf("[URL:%s code:%d Bytes:%d]\n", a[0], a[1], a[2]))
+						fmt.Println(color.LightCyan.Sprintf("%-80s", a[0]) + color.LightRed.Sprintf("[ code: %d, Bytes: %d ]\n", a[1], a[2]))
 						if out !=""{
 							code1 := fmt.Sprintf("%v", a[0])
 							code2 := fmt.Sprintf("%v", a[1])
@@ -188,7 +188,7 @@ func main() {
 						}
 					}
 					if len(a) == 4 {
-						fmt.Println(color.LightRed.Sprintf("[URL:%s code:%d Bytes:%d Title:%s]\n", a[0], a[1], a[2],a[3]))
+						fmt.Println(color.LightCyan.Sprintf("%-80s", a[0]) + color.LightRed.Sprintf("[ code: %d, Bytes: %d. Title: %s ]\n", a[1], a[2],a[3]))
 						if out !=""{
 							code1 := fmt.Sprintf("%v", a[0])
 							code2 := fmt.Sprintf("%v", a[1])
@@ -204,7 +204,7 @@ func main() {
 			if len(a) == 2 {
 				code := fmt.Sprintf("%v", a[1])
 				if strings.Contains(code, "Time") {
-					fmt.Println(color.LightMagenta.Sprintf("[URL:%s %s]\n", a[0],a[1]))
+					fmt.Println(color.LightCyan.Sprintf("%-80s", a[0]) + color.LightMagenta.Sprintf("[ %s ]\n",a[1]))
 					if out !=""{
 						code1 := fmt.Sprintf("%v", a[0])
 						code2 := fmt.Sprintf("%v", a[1])
@@ -215,7 +215,7 @@ func main() {
 		}
 		for _,a :=range Lines{
 			if len(a)==1{
-				fmt.Println(color.LightYellow.Sprintf("[URL:%s Error]\n",a[0]))
+				fmt.Println(color.LightCyan.Sprintf("%-80s", a[0]) +  color.LightYellow.Sprintf(" [ Error ]\n"))
 				if out !=""{
 					code1 := fmt.Sprintf("%v", a[0])
 					outfile(out,"[URL:"+code1+" Error]")
